@@ -1,0 +1,301 @@
+/* ===== Reset ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* ===== Base ===== */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Apple SD Gothic Neo', Calibri, sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Wrapper ===== */
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: clamp(24px, 5vw, 72px);
+  padding-right: clamp(24px, 5vw, 72px);
+  overflow: hidden;
+}
+
+/* ===== Background (full screen) ===== */
+.bg-right {
+  position: absolute;
+  inset: 0;
+  background-image: url('images/background.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.header,
+.main,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Header ===== */
+.header {
+  padding-top: clamp(28px, 5vh, 48px);
+  padding-bottom: clamp(12px, 2vh, 20px);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-heart {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.logo-text {
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Apple SD Gothic Neo', Calibri, sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 300;
+}
+
+.logo-text strong {
+  font-weight: 600;
+}
+
+/* ===== Main layout ===== */
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: clamp(24px, 4vh, 48px);
+  padding-bottom: clamp(24px, 4vh, 48px);
+}
+
+/* ===== Left content ===== */
+.left {
+  flex: 0 1 52%;
+}
+
+.short-line {
+  width: 28px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: clamp(24px, 4vh, 40px);
+}
+
+.headline {
+  font-family: 'Baskerville', 'Baskerville Old Face', 'Big Caslon', 'Book Antiqua', Georgia, serif;
+  font-size: clamp(2.6rem, 4.6vw, 5rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin-bottom: clamp(18px, 3vh, 32px);
+}
+
+.tagline {
+  font-size: clamp(0.66rem, 1.02vw, 0.78rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: clamp(24px, 4vh, 40px);
+}
+
+/* ===== Social / Instagram ===== */
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.social-caption {
+  font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+  font-size: 0.72rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+}
+
+.insta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  width: fit-content;
+  font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+}
+
+.insta-btn:hover,
+.insta-btn:focus-visible {
+  border-color: #fff;
+  background-color: #fff;
+  color: #000;
+  outline: none;
+}
+
+.insta-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* ===== Right decoration ===== */
+.right-deco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  justify-content: center;
+  padding-right: 15vw; /* pulls center ~66% from left to match design */
+}
+
+.vert-line {
+  display: block;
+  width: 1px;
+  height: clamp(60px, 10vh, 100px);
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.vert-line:last-child {
+  height: clamp(24px, 4vh, 40px); /* 40% від верхньої лінії */
+}
+
+.vert-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Apple SD Gothic Neo', Calibri, sans-serif;
+  font-size: clamp(0.64rem, 0.88vw, 0.8rem);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  white-space: nowrap;
+  line-height: 1.9;
+}
+
+/* ===== Footer ===== */
+.footer {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2.5vw, 28px);
+  padding-bottom: clamp(28px, 5vh, 48px);
+  padding-top: 8px;
+}
+
+.contact-item {
+  font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 1);
+}
+
+.contact-link {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+.contact-sep {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 100;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left {
+    flex: none;
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+  }
+
+  .short-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .social {
+    align-items: center;
+  }
+
+  .right-deco {
+    flex-direction: row;
+    padding-right: 0;
+    align-self: center;
+  }
+
+  .vert-line, .vert-line:last-child {
+    width: clamp(32px, 6vw, 50px);
+    height: 1px;
+  }
+
+  .footer {
+    justify-content: center;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+  .headline {
+    font-size: 2.4rem;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    gap: 6px 20px;
+  }
+
+  .contact-sep {
+    display: none;
+  }
+
+  .right-deco {
+    gap: 10px;
+  }
+}
