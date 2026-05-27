@@ -21,13 +21,14 @@ body {
 
 /* ===== Wrapper ===== */
 .wrapper {
-  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding-left: clamp(24px, 5vw, 72px);
   padding-right: clamp(24px, 5vw, 72px);
   overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /* ===== Background (full screen) ===== */
@@ -240,6 +241,7 @@ body {
   .header {
     display: flex;
     justify-content: center;
+    padding-top: 80px;
   }
 
   .main {
