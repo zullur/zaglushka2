@@ -27,7 +27,7 @@ body {
   padding-left: clamp(24px, 5vw, 72px);
   padding-right: clamp(24px, 5vw, 72px);
   overflow: hidden;
-  max-width: 1440px;
+  max-width: clamp(1400px, 90vw, 2000px);
   margin: 0 auto;
 }
 
@@ -105,7 +105,7 @@ body {
   font-family: 'Baskerville', 'Baskerville Old Face', 'Big Caslon', 'Book Antiqua', Georgia, serif;
   font-size: clamp(2.6rem, 4.6vw, 5rem);
   font-weight: 300;
-  line-height: 1.08;
+  line-height: 1.25em;
   letter-spacing: -0.01em;
   color: #fff;
   margin-bottom: clamp(18px, 3vh, 32px);
@@ -174,7 +174,6 @@ body {
   gap: 14px;
   flex: 1;
   justify-content: center;
-  padding-right: 15vw; /* pulls center ~66% from left to match design */
 }
 
 .vert-line {
@@ -234,6 +233,12 @@ body {
   font-weight: 100;
   font-size: 1.1rem;
   line-height: 1;
+}
+
+@media (max-width: 1400px) {
+  .headline {
+    line-height: 1.1em;
+  }
 }
 
 /* ===== Tablet ===== */
