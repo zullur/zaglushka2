@@ -17,6 +17,9 @@ body {
   font-weight: 300;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  background-image: url('images/background.png');
+  background-size: cover;
+  background-position: center;
 }
 
 /* ===== Wrapper ===== */
@@ -29,9 +32,6 @@ body {
   overflow: hidden;
   max-width: clamp(1400px, 90vw, 2000px);
   margin: 0 auto;
-  background-image: url('images/background.png');
-  background-size: cover;
-  background-position: center;
 }
 
 .header,
