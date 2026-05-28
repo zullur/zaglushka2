@@ -29,16 +29,9 @@ body {
   overflow: hidden;
   max-width: clamp(1400px, 90vw, 2000px);
   margin: 0 auto;
-}
-
-/* ===== Background (full screen) ===== */
-.bg-right {
-  position: absolute;
-  inset: 0;
   background-image: url('images/background.png');
   background-size: cover;
   background-position: center;
-  z-index: 0;
 }
 
 .header,
